@@ -1,0 +1,13 @@
+com\niit\controller\CanteenController.class
+com\niit\controller\PersonalCenterController.class
+com\niit\exception\RecordNotFoundException.class
+com\niit\controller\ChooseFoodController.class
+com\niit\controller\GlobalExceptionHandlerController.class
+com\niit\controller\AdminController.class
+com\niit\controller\LoginController.class
+com\niit\controller\SubmitOrderController.class
+com\niit\controller\RigsterPage.class
+com\niit\controller\HomeController.class
+com\niit\controller\TypeCaptchaController.class
+com\niit\controller\MyOrderController.class
+com\niit\controller\SuccessPaidController.class

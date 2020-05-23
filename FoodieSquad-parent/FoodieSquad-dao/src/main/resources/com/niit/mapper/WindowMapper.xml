@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.WindowMapper">
+  <resultMap id="BaseResultMap" type="com.niit.pojo.Window">
+    <id column="window_id" jdbcType="INTEGER" property="windowId" />
+    <result column="window_name" jdbcType="VARCHAR" property="windowName" />
+    <result column="window_description" jdbcType="VARCHAR" property="windowDescription" />
+    <result column="canteen_id" jdbcType="INTEGER" property="canteenId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from window
+    where window_id = #{windowId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.niit.pojo.Window">
+    insert into window (window_id, window_name, window_description, 
+      canteen_id)
+    values (#{windowId,jdbcType=INTEGER}, #{windowName,jdbcType=VARCHAR}, #{windowDescription,jdbcType=VARCHAR}, 
+      #{canteenId,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.niit.pojo.Window">
+    update window
+    set window_name = #{windowName,jdbcType=VARCHAR},
+      window_description = #{windowDescription,jdbcType=VARCHAR},
+      canteen_id = #{canteenId,jdbcType=INTEGER}
+    where window_id = #{windowId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select window_id, window_name, window_description, canteen_id
+    from window
+    where window_id = #{windowId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByCanteenId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select window_id, window_name, window_description, canteen_id
+    from window
+    where canteen_id = #{canteen_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select window_id, window_name, window_description, canteen_id
+    from window
+  </select>
+</mapper>

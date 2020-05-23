@@ -1,0 +1,73 @@
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+.container{
+    margin: 0 auto;
+	z-index: 4;
+	width: 375px;
+	height: 812px;
+	background: #ffffff;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.headingBox{
+	margin-left: 32px;
+	margin-top:65px;
+}
+
+.closeButtonSize{
+	width: 15px;
+	height: 15px;
+}
+.headingText{
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}
+.logoBox{
+	margin-left: 140px;
+	margin-top:65px;
+}
+.logoSize{
+	width: 96px;
+	height: 96px;
+}
+.inputBox{
+	margin-left: 32px;
+	margin-top:32px;
+}
+.inputShape{
+	width: 307px;
+	height: 70px;
+	background: #EFEFF4;
+	border: 0;
+	border-radius: 35px;
+}
+.inputText{
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}
+.addtionBox{
+	margin-top:62px;
+}
+.additionText{
+	font-family: PingFangSC-Semibold;
+	font-size: 11px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}

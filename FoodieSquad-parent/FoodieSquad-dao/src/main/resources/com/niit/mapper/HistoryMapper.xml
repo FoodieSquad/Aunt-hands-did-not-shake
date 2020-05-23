@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.HistoryMapper">
+
+
+  <resultMap id="BaseResultMap" type="com.niit.pojo.History">
+    <id column="history_id" jdbcType="INTEGER" property="historyId" />
+    <collection column="history_item_id" jdbcType="INTEGER" property="historyItemId" ofType="com.niit.pojo.HistoryItem" resultMap="HistoryItemMap"/>
+  </resultMap>
+  
+  <resultMap id="HistoryItemMap" type="com.niit.pojo.HistoryItem">
+    <id column="history_item_id" jdbcType="INTEGER" property="historyItemId" />
+    <result column="cart_id" jdbcType="INTEGER" property="cartId" />
+     <result column="dish_count" jdbcType="INTEGER" property="dishCount" />
+    <association column="dish_id" jdbcType="INTEGER" property="dishId" javaType="com.niit.pojo.Dish" resultMap="DishMap"/>
+ </resultMap>
+  
+   <resultMap id="DishMap" type="com.niit.pojo.Dish">
+    <id column="dish_id" jdbcType="INTEGER" property="dishId" />
+    <result column="window_id" jdbcType="INTEGER" property="windowId" />
+    <result column="dish_name" jdbcType="VARCHAR" property="dishName" />
+    <result column="dish_price" jdbcType="DECIMAL" property="dishPrice" />
+    <result column="dish_discription" jdbcType="VARCHAR" property="dishDiscription" />
+  </resultMap>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from history
+    where history_id = #{historyId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.niit.pojo.History">
+    insert into history (history_id)
+    values (#{historyId,jdbcType=INTEGER})
+  </insert>
+ 
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select h.*,hi.*,d.*
+    from history h left join history_item hi on h.history_id=hi.history_id
+    left join dish d on d.dish_id=hi.dish_id
+    where h.history_id = #{historyId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select *
+    from history
+  </select>
+</mapper>

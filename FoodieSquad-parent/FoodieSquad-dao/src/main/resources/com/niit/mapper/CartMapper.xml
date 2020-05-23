@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.CartMapper">
+  <resultMap id="BaseResultMap" type="com.niit.pojo.Cart">
+    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
+    <collection column="cart_item_id" jdbcType="INTEGER" property="cartItemId" ofType="com.niit.pojo.CartItem" resultMap="CartItemMap"/>
+  </resultMap>
+   <resultMap id="CartItemMap" type="com.niit.pojo.CartItem">
+     <id column="cart_item_id" jdbcType="INTEGER" property="cartItemId" />
+    <result column="cart_id" jdbcType="INTEGER" property="cartId" />
+   <result column="dish_count" jdbcType="INTEGER" property="dishCount" />
+    <association column="dish_id" jdbcType="INTEGER" property="dishId" javaType="com.niit.pojo.Dish" resultMap="DishMap"/>
+  </resultMap>
+  
+   <resultMap id="DishMap" type="com.niit.pojo.Dish">
+    <id column="dish_id" jdbcType="INTEGER" property="dishId" />
+    <result column="window_id" jdbcType="INTEGER" property="windowId" />
+    <result column="dish_name" jdbcType="VARCHAR" property="dishName" />
+    <result column="dish_price" jdbcType="DECIMAL" property="dishPrice" />
+    <result column="dish_discription" jdbcType="VARCHAR" property="dishDiscription" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cart
+    where cart_id = #{cartId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert">
+    insert into cart (cart_id)
+    values (#{cartId,jdbcType=INTEGER})
+  </insert>
+  
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select c.*,ci.*,d.*
+    from cart c left join cart_item ci on 
+    c.cart_id=ci.cart_id
+    left join dish d on d.dish_id=ci.dish_id
+    where c.cart_id = #{cartId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select *
+    from cart
+  </select>
+</mapper>

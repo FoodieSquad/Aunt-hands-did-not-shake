@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.niit.pojo.User">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_student_num" jdbcType="VARCHAR" property="userStudentNum" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+    <result column="user_gender" jdbcType="CHAR" property="userGender" />
+    <result column="user_balance" jdbcType="DECIMAL" property="userBalance" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <association column="cart_id" javaType="com.niit.pojo.Cart" jdbcType="INTEGER" property="cartId" resultMap="CartMap" />
+    <collection column="user_tele_id" jdbcType="VARCHAR" ofType="com.niit.pojo.UserTele" property="userTele">
+    <id column="user_tele_id" jdbcType="INTEGER" property="userTeleId" />
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_tele" jdbcType="VARCHAR" property="userTele" />
+    </collection>
+    <collection column="user_address" jdbcType="VARCHAR" ofType="com.niit.pojo.UserAddress" property="userAddress">
+     <id column="user_address_id" jdbcType="INTEGER" property="userAddressId" />
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_address" jdbcType="VARCHAR" property="userAddress" />
+    </collection>
+  </resultMap>
+
+ 
+<resultMap id="CartMap" type="com.niit.pojo.Cart">
+    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
+    <collection column="cart_item_id" jdbcType="INTEGER" property="cartItemId" ofType="com.niit.pojo.CartItem" resultMap="CartItemMap"/>
+  </resultMap>
+  
+  
+   <resultMap id="CartItemMap" type="com.niit.pojo.CartItem">
+     <id column="cart_item_id" jdbcType="INTEGER" property="cartItemId" />
+    <result column="cart_id" jdbcType="INTEGER" property="cartId" />
+   <result column="dish_count" jdbcType="INTEGER" property="dishCount" />
+    <association column="dish_id" jdbcType="INTEGER" property="dishId" javaType="com.niit.pojo.Dish" resultMap="DishMap"/>
+  </resultMap>
+  
+   <resultMap id="DishMap" type="com.niit.pojo.Dish">
+    <id column="dish_id" jdbcType="INTEGER" property="dishId" />
+    <result column="window_id" jdbcType="INTEGER" property="windowId" />
+    <result column="dish_name" jdbcType="VARCHAR" property="dishName" />
+    <result column="dish_price" jdbcType="DECIMAL" property="dishPrice" />
+    <result column="dish_discription" jdbcType="VARCHAR" property="dishDiscription" />
+  </resultMap>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+   delete from user where user_id=#{userId,jdbcType=INTEGER};
+ </delete> 
+  
+<insert id="insert" parameterType="com.niit.pojo.User">
+    insert into user (user_id, user_student_num, user_name, 
+      user_password, user_gender, user_balance, 
+      user_type, cart_id, user_address_id, 
+      user_tele_id)
+    values (#{userId,jdbcType=INTEGER}, #{userStudentNum,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
+      #{userPassword,jdbcType=VARCHAR}, #{userGender,jdbcType=CHAR}, #{userBalance,jdbcType=DECIMAL}, 
+      #{userType,jdbcType=INTEGER}, #{cartId.cartId,jdbcType=INTEGER},#{userId,jdbcType=INTEGER}, 
+    #{userId,jdbcType=INTEGER})
+  </insert>
+  
+ 
+<update id="updateByPrimaryKey" parameterType="com.niit.pojo.User">
+    update user
+    set user_student_num = #{userStudentNum,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      user_password = #{userPassword,jdbcType=VARCHAR},
+      user_gender = #{userGender,jdbcType=CHAR},
+      user_balance = #{userBalance,jdbcType=DECIMAL},
+      user_type = #{userType,jdbcType=INTEGER},
+      cart_id = #{cartId.cartId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
+</update>
+
+<update id="updateCartId" parameterType="java.lang.Integer">
+    update user
+    set cart_id = #{userId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
+</update>
+
+
+
+
+ <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+ select 
+     u.user_id, u.user_student_num,u. user_name, 
+     u. user_password,  u.user_gender, 
+     u.user_balance, u.user_type, 
+     u.cart_id,c.*,d.*,ut.*,ua.*
+    from user u
+    left join cart c on u.cart_id=c.cart_id
+    left join user_tele ut on ut.user_id=u.user_id
+    left join user_address ua on ua.user_id=u.user_id
+    left join cart_item ci on c.cart_id=ci.cart_id
+    left join dish d on d.dish_id=ci.dish_id
+    where u.user_id = #{userId,jdbcType=INTEGER}
+    
+</select>
+   <select id="selectAll" resultMap="BaseResultMap">
+   select *
+    from user u 
+ </select> 
+
+
+ 
+</mapper>

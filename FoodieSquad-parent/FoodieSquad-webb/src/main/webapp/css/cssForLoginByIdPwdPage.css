@@ -1,0 +1,89 @@
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+.container{
+    margin: 0 auto;
+	z-index: 4;
+	width: 375px;
+	height: 812px;
+	background: #ffffff;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.headingBox{
+	margin-left: 32px;
+	margin-top:65px;
+}
+
+.backButtonSize{
+	width: 15px;
+	height: 15px;
+}
+.logoBox{
+	margin-left: 140px;
+	margin-top:17px;
+}
+.logoSize{
+	width: 96px;
+	height: 96px;
+}
+.inputBox{
+	margin-left: 32px;
+	margin-top:32px;
+}
+.inputShape{
+	margin-bottom:20px;
+	width: 307px;
+	height: 70px;
+	background: #EFEFF4;
+	border: 0;
+	border-radius: 35px;
+}
+.inputText{
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}
+.loginButtonBox{
+	margin-left: 32px;
+	margin-top:32px;
+}
+.loginButtonShape{
+	width: 241px;
+	height: 55px;
+	background: #3d7eff;
+	border: solid 1px #979797;
+	border-radius: 35px;
+	box-shadow: 0px 5px8px 1px rgba(61,126,255,0.33);
+}
+.loginButtonText{
+	font-family: "PingFangSC-Semibold";
+	font-size: 21px;
+	color: #f7f7f7;
+	letter-spacing: 10px;
+	text-align: center;
+	line-height: 34px;
+	font-weight: 400;
+}
+
+.addtionBox{
+
+}
+.additionText{
+	margin-top:100px;
+	font-family: PingFangSC-Semibold;
+	font-size: 11px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}

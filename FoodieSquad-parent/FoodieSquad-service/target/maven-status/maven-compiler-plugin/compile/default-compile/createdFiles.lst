@@ -1,0 +1,10 @@
+com\niit\service\CanteenService.class
+com\niit\service\WindowService.class
+com\niit\service\DishService.class
+com\niit\service\AdminService.class
+com\niit\service\UserService.class
+com\niit\service\DeliverService.class
+com\niit\service\HistoryService.class
+com\niit\service\OrderService.class
+com\niit\service\FavoriteService.class
+com\niit\service\CartService.class

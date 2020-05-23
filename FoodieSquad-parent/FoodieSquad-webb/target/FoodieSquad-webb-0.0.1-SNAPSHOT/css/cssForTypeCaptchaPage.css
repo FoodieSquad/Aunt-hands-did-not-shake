@@ -1,0 +1,82 @@
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+.container{
+    margin: 0 auto;
+	z-index: 4;
+	width: 375px;
+	height: 812px;
+	background: #ffffff;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.headingBox{
+	margin-left: 32px;
+	margin-top:65px;
+}
+
+.backButtonSize{
+	width: 15px;
+	height: 15px;
+}
+.topTextBox{
+	margin-left: 48px;
+	margin-top:69px;
+}
+.topText{
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #494949;
+	letter-spacing: 0;
+	line-height: 34px;
+}
+.inputBox{
+	
+	margin-top:43px;
+}
+.verificationCode ul{
+  width: 281px;
+  height: 72px;
+}
+
+.verificationCode li{
+	width: 53px;
+	height: 72px;
+	background: #EFEFF4;
+	border-radius: 11px;
+	list-style:none;
+	float:left;
+	margin:0px 7px;
+}
+.verificationCodeText{
+	font-family: PingFangSC-Semibold;
+	font-size: 38px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;	
+}
+.verificationCodeInput{
+	width:0;height:0;border:0;
+}
+.active{
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.addtionBox{
+	margin-left: 48px;
+	
+}
+.additionText{
+	margin-top:14px;
+	font-family: PingFangSC-Semibold;
+	font-size: 11px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	line-height: 34px;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.FavoriteMapper">
+  <resultMap id="BaseResultMap" type="com.niit.pojo.Favorite">
+  <id column="user_id" jdbcType="INTEGER" property="userId" />
+  <collection column="favorite_id" jdbcType="INTEGER" property="favoriteId" ofType="com.niit.pojo.Dish" resultMap="DishMap" />
+  </resultMap>
+  <resultMap id="DishMap" type="com.niit.pojo.Dish">
+    <id column="dish_id" jdbcType="INTEGER" property="dishId" />
+    <result column="window_id" jdbcType="INTEGER" property="windowId" />
+    <result column="dish_name" jdbcType="VARCHAR" property="dishName" />
+    <result column="dish_price" jdbcType="DECIMAL" property="dishPrice" />
+    <result column="dish_discription" jdbcType="VARCHAR" property="dishDiscription" />
+  </resultMap>
+ <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from favorite
+    where favorite_id = #{favoriteId,jdbcType=INTEGER}
+   and user_id = #{userId,jdbcType=INTEGER}
+  </delete> 
+   <delete id="deleteByUserId" parameterType="java.lang.Integer">
+    delete from favorite
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete> 
+  <insert id="insert" parameterType="com.niit.pojo.Favorite">
+    insert into favorite (favorite_id, user_id)
+    values (#{favoriteId.dish_id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert> 
+  <!-- <select id="selectAll" resultMap="BaseResultMap">
+    select f.*,d.*
+    from favorite f left join dish d on f.favorite_id=d.dish_id
+  </select> -->
+  <select id="selectByUserId" resultMap="BaseResultMap">
+    select f.*,d.*  
+    from favorite f 
+    left join dish d on f.favorite_id=d.dish_id
+    where user_id=#{userId,jdbcType=INTEGER}
+  </select>
+ 
+</mapper>

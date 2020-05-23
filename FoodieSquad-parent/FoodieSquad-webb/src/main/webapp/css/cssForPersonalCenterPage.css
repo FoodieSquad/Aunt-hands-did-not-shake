@@ -1,0 +1,110 @@
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+.container{
+    margin: 0 auto;
+	z-index: 4;
+	width: 375px;
+	height: 812px;
+	background: #f9f9f9;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.headingBox{
+	width: 375px;
+	height: 197px;
+	background: #3d7eff;
+}
+.backButtonBox{
+	margin-left:9px;
+	margin-top:50px;
+}
+.backButtonSize{
+	width: 12px;
+	height: 20px;
+}
+.personalPanelBox{
+	margin-left:9px;
+	margin-top:122px;
+	width: 357px;
+	height: 152px;
+	background: #ffffff;
+	box-shadow: 0px 2px6px #efeff4;	
+	border-radius: 15px;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+
+}
+.personalPanelTextBox{
+	margin-left:125px;
+	margin-top:50px;
+	width: 113px;
+	height: 34px;
+	
+}
+.personalPanelText{	  
+  color: #212121;
+  font-family: "PingFangSC-Semibold";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: center;
+}
+.logoBox{
+	margin-left: 135px;
+	margin-top:68px;
+	width: 100px;
+	height: 100px;
+	border-radius:50%;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+	position:absolute;
+	background: #ffffff;
+}
+.logoSize{
+	margin-left:20px;
+	margin-top:26px;
+	width: 70px;
+	height: 66px;
+	position:relative;
+}
+.pageDispatcherBox{
+	margin-left: 9px;
+	margin-top:114px;	
+	width: 357px;
+	height: 197px;
+	background: #ffffff;
+	box-shadow: 0px 2px6px #efeff4;	
+	border-radius: 15px;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.myOrderListBox{
+	margin-left: 22px;
+	margin-top:26px;
+	width: 57px;
+	height: 67px;
+}
+.myOrderListImg{
+	width: 48px;
+	height: 50px;
+	margin-bottom:0;
+}
+
+.addtionBox{
+
+}
+.additionText{
+	font-family: PingFangSC-Semibold;
+	font-size: 11px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}

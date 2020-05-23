@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="context1" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <property name="autoDelimitKeywords" value="true"/>
+     <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+            <!--阻止生成的注释包含时间戳-->
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/foodie" driverClass="com.mysql.jdbc.Driver" password="123" userId="root" >
+   <property name="nullCatalogMeansCurrent" value="true"/>
+</jdbcConnection>
+       <!--  实体类生成路径  -->
+    <javaModelGenerator targetPackage="com.niit.pojo" targetProject="FoodieSquad-pojo" />
+      <!--  XML生成路径  -->
+     <sqlMapGenerator targetPackage="com.niit.mapper" targetProject="FoodieSquad-dao"/>
+       <!--  接口生成路径  -->
+    <javaClientGenerator targetPackage="com.niit.mapper" targetProject="FoodieSquad-dao" type="XMLMAPPER" />
+ 
+ <table  tableName="history_item"/>
+
+ 
+  </context>
+</generatorConfiguration>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.UserTeleMapper">
+  <resultMap id="BaseResultMap" type="com.niit.pojo.UserTele">
+    <id column="user_tele_id" jdbcType="INTEGER" property="userTeleId" />
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_tele" jdbcType="VARCHAR" property="userTele" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from user_tele
+    where user_tele_id = #{userTeleId,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+   <delete id="deleteByUserId" parameterType="map">
+    delete from user_tele
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.niit.pojo.UserTele">
+    insert into user_tele (user_tele_id, user_id, user_tele
+      )
+    values (#{userTeleId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{userTele,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.niit.pojo.UserTele">
+    update user_tele
+    set user_tele = #{userTele,jdbcType=VARCHAR}
+    where user_tele_id = #{userTeleId,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select user_tele_id, user_id, user_tele
+    from user_tele
+    where user_tele_id = #{userTeleId,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  
+ <select id="selectUserIdByUserTele" resultMap="BaseResultMap">
+   select user_tele_id, user_id, user_tele
+   from user_tele where user_tele like #{user_tele,jdbcType=VARCHAR};
+  </select> 
+   <select id="selectByUserId" parameterType="map" resultMap="BaseResultMap">
+    select user_tele_id, user_id, user_tele
+    from user_tele
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select user_tele_id, user_id, user_tele
+    from user_tele
+  </select>
+</mapper>

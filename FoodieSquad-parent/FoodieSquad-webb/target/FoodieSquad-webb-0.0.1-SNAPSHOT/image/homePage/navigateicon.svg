@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>Glyphs / Home Screen Quick Actions / Location</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="22.9444444 5.2506 5.44444444 13.49985 5.44444444 13.87485 14.3881111 13.87485 14.3881111 22.49985 14.7785556 22.49985 23.3325556 5.62485 23.3325556 5.2506"></polygon>
+    </defs>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-36.000000, -338.000000)">
+            <g id="iPhone-X头尾"></g>
+            <g id="上次吃过" transform="translate(31.000000, 330.000000)">
+                <g id="Glyphs-/-Home-Screen-Quick-Actions-/-Location" transform="translate(0.000000, 3.000000)">
+                    <g id="location" style="mix-blend-mode: color-burn;">
+                        <use fill-opacity="0.3" fill="#000000" xlink:href="#path-1"></use>
+                        <use fill="#4D4D4D" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

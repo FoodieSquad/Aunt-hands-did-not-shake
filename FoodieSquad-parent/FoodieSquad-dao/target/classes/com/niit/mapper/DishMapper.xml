@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.DishMapper">
+  <resultMap id="BaseResultMap" type="com.niit.pojo.Dish">
+    <id column="dish_id" jdbcType="INTEGER" property="dishId" />
+    <result column="window_id" jdbcType="INTEGER" property="windowId" />
+    <result column="dish_name" jdbcType="VARCHAR" property="dishName" />
+    <result column="dish_price" jdbcType="DECIMAL" property="dishPrice" />
+    <result column="dish_discription" jdbcType="VARCHAR" property="dishDiscription" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from dish
+    where dish_id = #{dishId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.niit.pojo.Dish">
+    insert into dish (dish_id, window_id, dish_name, 
+      dish_price, dish_discription)
+    values (#{dishId,jdbcType=INTEGER}, #{windowId,jdbcType=INTEGER}, #{dishName,jdbcType=VARCHAR}, 
+      #{dishPrice,jdbcType=DECIMAL}, #{dishDiscription,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.niit.pojo.Dish">
+    update dish
+    set window_id = #{windowId,jdbcType=INTEGER},
+      dish_name = #{dishName,jdbcType=VARCHAR},
+      dish_price = #{dishPrice,jdbcType=DECIMAL},
+      dish_discription = #{dishDiscription,jdbcType=VARCHAR}
+    where dish_id = #{dishId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select dish_id, window_id, dish_name, dish_price, dish_discription
+    from dish
+    where dish_id = #{dishId,jdbcType=INTEGER}
+  </select>
+   <select id="selectByWindowId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select dish_id, window_id, dish_name, dish_price, dish_discription
+    from dish
+    where window_id = #{window_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select dish_id, window_id, dish_name, dish_price, dish_discription
+    from dish
+  </select>
+   <select id="selectDishesByCartId" parameterType="Integer" resultMap="BaseResultMap">
+    select d.*
+    from dish d left join cart c
+    on d.dish_id=c.dish_id
+    where cart_id = #{cartId,jdbcType=INTEGER}
+  </select>
+   <select id="searchByDishName"  resultMap="BaseResultMap">
+   select *
+      from dish
+      <if test="name!=null and name!='' ">
+      <bind name="DishNameLike" value=" '%'+name+'%'"/>
+       where dish_name like #{DishNameLike};
+      </if>
+    
+  
+  </select>
+  
+</mapper>

@@ -1,0 +1,93 @@
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+.container{
+    margin: 0 auto;
+	z-index: 4;
+	width: 375px;
+	height: 812px;
+	background: #ffffff;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.headingBox{
+	margin-left: 32px;
+	margin-top:65px;
+}
+
+.closeButtonSize{
+	width: 15px;
+	height: 15px;
+}
+.headingText{
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}
+.logoBox{
+	margin-left: 140px;
+	margin-top:30px;
+}
+.logoSize{
+	width: 96px;
+	height: 96px;
+}
+.inputBox{
+	margin-left: 32px;
+	margin-top:32px;
+}
+.inputShape{
+	width: 180px;
+	height: 30px;
+	border: 1px solid #A6A6A6;
+	border-radius: 10px;
+}
+.inputText{
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}
+.addtionBox{
+	margin-top:20px;
+}
+.additionText{
+	font-family: PingFangSC-Semibold;
+	font-size: 11px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+}
+
+
+.td_left{
+            width: 30%;
+            height: 50px;
+            text-align: right;
+            color: #A6A6A6;
+        }
+        .td_right{
+            padding-left: 25px;
+            color: #A6A6A6;
+        }
+.submitShape{
+	width: 150px;
+	height: 50px;
+	border: 1px solid #A6A6A6;
+	border-radius: 20px;
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #494949;
+}

@@ -1,0 +1,358 @@
+ 
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+
+
+#img1{
+	 height:15px;
+	 float: left;
+	 margin-left:10px;
+	 padding-top: 10px;
+}
+
+.mycontainer{
+    margin: 0 auto;
+	width: 375px;
+	height:812px;
+	background: #ffffff;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+	overflow:hidden;
+}
+
+
+
+/*5.1海大食堂标题*/
+
+.tab{
+	background: #3D7EFF;
+    border-radius: 16px;
+    margin-left: 20px;
+    margin-top: 0px;
+    height: 3px;
+   width: 35px;
+}
+
+/*海大食堂文本*/
+.text_canteen{font-family: PingFangSC-Semibold;
+font-size: 20px;
+color: #494949;
+letter-spacing: 0;
+text-align: left;
+line-height: 34px;
+padding-top: 10px;}
+
+
+/*5.2食堂*/
+
+/*text食堂名称*/
+.text_canteenName{font-family: PingFangSC-Medium;
+font-size: 14px;
+color: #535151;
+letter-spacing: 0;
+line-height: 34px;
+margin-left: 25px;
+   margin-top: 0px;
+  margin-right: 0px;
+ line-height: 25.5px;}
+ 
+
+
+
+/*叹号.svg*/
+
+/*text餐厅密集*/
+.text_canteenBusy{
+font-family: PingFangSC-Regular;
+font-size: 10px;
+color: #8E8E93;
+letter-spacing: 0;
+line-height: 34px;}
+
+
+/*text推荐*/
+.text_recommand{
+font-family: PingFangSC-Regular;
+font-size: 12px;
+color: #8E8E93;
+letter-spacing: 0;
+line-height: 34px;
+height: 20px; 
+text-align: justify;
+}
+.tanhao{
+	font-family: PingFangSC-Regular;
+font-size: 8px;
+color: grey;
+letter-spacing: 0.57px;
+text-align: center;
+line-height: 34px;
+border: 0 solid #979797;}
+
+
+/*text距离*/
+.text_distance{font-family: PingFangSC-Regular;
+font-size: 13px;
+color: #8E8E93;
+letter-spacing: 0;
+text-align: center;
+line-height: 34px;
+margin-right: 0px;
+width: 30px;
+height: 30px;   
+ margin-left: 160px;}
+
+
+/*text附近*/
+.text_nearby{
+font-family: PingFangSC-Regular;
+font-size: 13px;
+color: #8E8E93;
+letter-spacing: 0.93px;
+text-align: center;
+line-height: 34px;
+padding-left: 10px;
+}
+
+
+/*bg矩形*/
+.circle{background: #FFFFFF;
+border-radius: 20px;
+text-align: center;
+    margin-top: 70px;
+    width: 98%;}
+
+/*5.3 我的收藏*/
+
+
+
+/*text我的收藏*/
+.text_mycollection{font-family: PingFangSC-Semibold;
+font-size: 20px;
+color: #494949;
+letter-spacing: 0;
+text-align: center;
+line-height: 34px;
+text-align: inherit;height: 30px;margin-top: 30px;
+}
+
+/*text我的标注*/
+.text_mylabel{
+font-family: PingFangSC-Regular;
+font-size: 12px;
+color: #8E8E93;
+letter-spacing: 0;
+text-align: center;
+line-height: 34px;}
+
+
+/*bg矩形*/
+
+
+
+
+/*5.4搜索框 
+
+搜索按钮.svg 
+
+路径.svg */
+
+/*text标注*/
+.text_label{
+font-family: PingFangSC-Regular;
+font-size: 10.5px;
+color: black;
+letter-spacing: 0;
+text-align: left;
+line-height: 25.5px;
+padding-left: 10px;
+height: 38px;
+margin:0;
+border-color: transparent;
+background-color: transparent;
+width:180px;
+height: 15px ;
+
+
+}
+
+
+/*text海南大学*/
+.text_HNU{
+	font-family: PingFangSC-Semibold;
+	font-size: 14px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 34px;
+margin-left:10px;
+}
+
+/*矩形2 搜索框*/
+.search{
+background: #EFEFF4;
+border-radius: 12px;
+margin-left:12px;
+margin-top:12px; 
+width: 351px; 
+height: 34px; 
+}
+
+/*矩形*/
+.searchBar{
+background: #FFFFFF;
+box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
+height:39px;
+width:372px;
+}
+#canteensForChoose
+{
+	border-radius: 5px;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.fujinBox
+{
+
+ margin-left:6px;
+ 
+}
+/*
+5.5标题组
+
+返回按钮.svg */
+
+
+/*text标题*/
+.text_title{
+font-family: PingFangSC-Medium;
+font-size: 14px;
+color: #FFFFFF;
+letter-spacing: 1px;
+text-align: center;
+line-height: 34px;
+padding-top: 44px ;
+}
+.leftmost{
+	margin-left: 0;
+}
+/*bg背景色1*/
+.bg_1{background: #3D7EFF;}
+
+#model{
+width: 365px;
+display:none;
+height:388px;
+background: #FFFFFF;
+border-radius: 25px 25px 0px 0px;
+position:absolute;
+bottom:0px;
+margin: 0 auto;
+z-index: 1000;
+padding:23px 1px 0px 21px ; 
+}
+
+/* 半透明的遮罩层 */
+#overlay {
+	margin: 0 auto;
+	width: 375px;
+	height:812px;
+    position: absolute;
+    background-color: rgba(10, 10, 10, 0.5);
+    display: none;
+    z-index: 999;
+}
+div[name="jcfs"]{
+  width:100%;
+  height:81px;
+  position: relative;
+}
+div[name="jcfs"]>div{
+
+color: blue;
+margin: 0px;
+height: 100%;
+width: 50%;
+text-align: justify;
+position: absolute;
+display: inline-block;
+
+}
+#no1{
+  left: 0px;
+  top: 0px;
+
+}
+#no2{
+  right: 0px;
+  top: 0px;
+  
+}
+
+div[name="jcfs"]>div>span{
+color:grey;
+}
+div[name="jcfs"]>div>span[name="sp"]{
+font-family: PingFangSC-Medium;
+font-size: 1px;
+letter-spacing: 0;
+position: absolute;
+line-height: 15px;
+left: 46%;
+padding-left: 3px;
+margin-top: 20px;
+}
+
+div[name="jcfs"]>div>span{
+font-family: PingFangSC-Medium;
+font-size: 18px;
+position: absolute;
+left: 45%;
+top: 20px;
+
+
+}
+#p1>img{
+    position: relative;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+[name="im"]{
+  display: inline;
+   position: relative;
+  vertical-align: -webkit-baseline-middle;
+  margin-right: 10px;
+}
+p[name="xzdc"]{
+font-family: PingFangSC-Semibold;
+font-size: 14px;
+letter-spacing: 0;
+line-height: 34px;
+color:grey;
+ position: relative;
+}
+
+
+p[name="xzdc"]>span{
+font-family: PingFangSC-Semibold;
+font-size: 14px;
+letter-spacing: 0;
+line-height: 34px;
+position: absolute;
+    left: 13%;
+    margin-top: 25px;
+}
+
+p[name="xzdc"]>img{
+  display: inline;
+  position: relative;
+}
+
+

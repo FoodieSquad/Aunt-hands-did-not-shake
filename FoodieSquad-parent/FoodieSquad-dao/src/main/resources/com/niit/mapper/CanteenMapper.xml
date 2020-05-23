@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapper.CanteenMapper">
+  <resultMap id="BaseResultMap" type="com.niit.pojo.Canteen">
+    <id column="canteen_id" jdbcType="INTEGER" property="canteenId" />
+    <result column="canteen_name" jdbcType="VARCHAR" property="canteenName" />
+    <result column="canteen_tele" jdbcType="VARCHAR" property="canteenTele" />
+    <result column="canteen_address" jdbcType="VARCHAR" property="canteenAddress" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from canteen
+    where canteen_id = #{canteenId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.niit.pojo.Canteen">
+    insert into canteen (canteen_id, canteen_name, canteen_tele, 
+      canteen_address)
+    values (#{canteenId,jdbcType=INTEGER}, #{canteenName,jdbcType=VARCHAR}, #{canteenTele,jdbcType=VARCHAR}, 
+      #{canteenAddress,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.niit.pojo.Canteen">
+    update canteen
+    set canteen_name = #{canteenName,jdbcType=VARCHAR},
+      canteen_tele = #{canteenTele,jdbcType=VARCHAR},
+      canteen_address = #{canteenAddress,jdbcType=VARCHAR}
+    where canteen_id = #{canteenId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select canteen_id, canteen_name, canteen_tele, canteen_address
+    from canteen
+    where canteen_id = #{canteenId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select canteen_id, canteen_name, canteen_tele, canteen_address
+    from canteen
+  </select>
+  <select id="searchCanteenByName" resultMap="BaseResultMap">
+   select * from canteen 
+ <if test= " name != null and name != '' "> 
+  <bind name="canteenNameLike" value=" '%' + name + '%'"/>
+	where canteen_name like #{ canteenNameLike }
+ </if>
+ </select>
+ 
+  
+  
+</mapper>

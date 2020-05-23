@@ -1,0 +1,182 @@
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+.container{
+    margin: 0 auto;
+    width: 375px;
+	height: 812px;
+	background: #F9F9F9;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.headingBox{
+	background: #3D7EFF;
+	text-align:center;
+	height: 60px;
+	padding-top: 30px;
+	padding-right: 19px;
+}
+
+.returnButtonSize{
+	margin-left: 3px;
+	margin-top:5px;
+	float:left;
+	width: 15px;
+	height: 18px;
+}
+.headingText{
+	text-align:center;
+	font-family: PingFangSC-Medium;
+	font-size: 15px;
+	color: #FFFFFF;
+	line-height: 30px;
+	
+}
+.ModuleTitleBox{
+margin-left: 25px;
+	margin-top: 21px;
+}
+.ModuleTitleText{
+	font-family: PingFangSC-Semibold;
+	font-size: 10px;
+	color: #212121;
+	letter-spacing: 0;
+	line-height: 15px;
+}
+
+.Takingfoodnumber{
+	font-family: PingFangSC-Semibold;
+	font-size: 35px;
+	color: #212121;
+	letter-spacing: 0;
+	text-align: center;
+	line-height:0px;
+}
+.Takingfoodtext{
+	font-family: PingFangSC-Semibold;
+	font-size: 15px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;	
+	line-height: normal;
+}
+.Takingfoodaddtion{
+	font-family: PingFangSC-Semibold;
+	font-size: 10px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: normal; 
+}
+.Takingfoodpanel{
+	width: 374px;
+	height:150px;
+	background: #FFFFFF;
+	box-shadow: 0 2px 6px 0 #EFEFF4;
+	border-radius: 20px;
+}
+
+.Takingfoodnumber{
+	font-family: PingFangSC-Semibold;
+	font-size: 35px;
+	color: #212121;
+	letter-spacing: 0;
+	text-align: center;
+	line-height:0px;
+}
+.Takingfoodtext{
+	font-family: PingFangSC-Semibold;
+	font-size: 15px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;	
+	line-height: normal;
+}
+
+.OrderHistoryBox{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top:10px;
+}
+.OrderHistoryText{
+	font-family: PingFangSC-Semibold;
+	font-size: 10px;
+	color: #212121;
+	letter-spacing: 0;
+	line-height: 15px;
+	float:left;
+}
+.OrderHistorydateplace{
+	font-family: PingFangSC-Semibold;
+	font-size: 10px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	float: right;
+	line-height: 15px; 
+}
+.OrderHistoryBox2{
+	margin-left: 0px;
+	margin-right: 7px;
+	margin-top:5px;
+}
+.OrderHistoryimg{
+	margin-left:3px;
+	margin-top:3px;
+	float:left;
+	width: 50px;
+	height: 50px;
+}
+.OrderHistoryfoodname{
+	font-family: PingFangSC-Semibold;
+	font-size: 15px;
+	color:  #212121;
+	letter-spacing: 0;
+	text-align: left;
+	line-height: 15px; 
+}
+.OrderHistorynumber{
+	font-family: PingFangSC-Semibold;
+	font-size: 10px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	float: left;
+	line-height: 15px; 
+}
+
+.OrderHistoryamount1{
+	font-family: PingFangSC-Semibold;
+	font-size: 13px;
+	color: #212121;
+	letter-spacing: 0;
+	line-height: 15px;
+	float:right;
+}
+.OrderHistoryamount2{
+	font-family: PingFangSC-Semibold;
+	font-size: 20px;
+	color: #212121;
+	letter-spacing: 0;
+	line-height: 15px;
+	float:right;
+}
+
+.OrderHistorypanel{
+
+	margin:0 auto;
+	width:330px;
+	height:auto;
+	background: #FFFFFF;
+	box-shadow: 0 2px 6px 0 #EFEFF4;
+	border-radius: 20px;
+}
+
+
+.clear{ 
+	clear:both;
+} 

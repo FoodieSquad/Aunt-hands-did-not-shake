@@ -1,0 +1,257 @@
+body {
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width:980px;
+    }
+}
+.container{
+    margin: 0 auto;
+	z-index: 4;
+	width: 375px;
+	height: 812px;
+	background: #f9f9f9;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.headingBox{
+	width: 375px;
+	height: 149px;
+	background-size:350px  140px；
+}
+.backButtonBox{
+	margin-left:9px;
+	margin-top:50px;
+}
+.backButtonSize{
+	width: 8x;
+	height: 15px;
+}
+.canteenInfoBox{
+	margin-left:9px;
+	margin-top:80px;
+	position:absolute;
+	width: 357px;
+	height: 105px;
+	background: #FFFFFF;
+	box-shadow: 0 2px 6px 0 #EFEFF4;
+	border-radius: 20px;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+
+}
+.canteenInfoTextBox{
+	margin-left:13px;
+	margin-top:30px;
+	
+}
+.canteenInfoText{	  
+	color: #212121;
+	font-family: "PingFangSC-Semibold";
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 12px;
+}
+.canteenTextReconmmendText{
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	line-height: 12px;
+}
+.foodieHeadingBox{
+	margin-left: 9px;
+	margin-top:76px;
+	width: 357px;
+	height: 105px;
+	background: #FFFFFF;
+	box-shadow: 0 2px 6px 0 #EFEFF4;
+	border-radius: 20px;
+	border:0.5px solid;
+	border-color: rgba(151, 151, 151, 0.3);
+}
+.foodieHeadingSize{
+	width: 357px;
+	height: 105px;
+}
+.orderSubfieldBox{
+	margin-top:20px;
+	width: 376px;
+	height: 422px;
+	z-index:2;
+	position:absolute;
+}
+
+
+.settleAccountBox{
+	margin-left: 22px;
+	margin-top:347px;
+	width: 329px;
+	height: 42px;
+	position:absolute;
+	z-index:3;
+}
+div.tab {
+    float: left;
+    border: 0;
+    background-color: #efeff4;
+	width: 20%;
+    height: 410px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+	text-overflow:ellipsis;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	text-align: center;
+	background-color: #efeff4;
+	width: 100%;
+    height: 56px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #ffffff;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    background-color: #ffffff;
+    width: 73%;
+    border-left: none;
+    height: 410px;
+	overflow-y:auto;
+}
+.tabcontent .cash{
+	width:100%;
+	padding:auto;
+	height:85px;
+	margin-bottom:20px;
+}
+.tabcontent .tittle{
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #494949;
+	letter-spacing: 1px;
+	text-align:left;
+}
+.tabcontent .cash table .cashimg
+{
+	width: 84px;
+	height: 84px;
+	display:inline;
+
+}
+.tabcontent .cash table
+{
+	width:100%;
+	height: 96px;
+
+}
+
+.tabcontent .cash table .cashName
+{
+	font-family: PingFangSC-Semibold;
+	font-size: 14px;
+	color: #494949;
+	letter-spacing: 0;
+	text-overflow:ellipsis;
+
+}
+.tabcontent .cash table .price
+{
+	font-family: DINAlternate-Bold;
+	font-size: 14px;
+	color: #E02D3F;
+	letter-spacing: 0;
+	text-align: left;
+
+}
+.tabcontent .cash table .number
+{
+	margin-top:5px;
+	font-family: PingFangSC-Regular;
+	font-size: 11px;
+	color: #494949;
+	letter-spacing: 0;
+	text-align: center;
+
+}
+.tabcontent .cash table .btnSize
+{
+	width: 25px;
+	height: 25px;
+
+}
+
+#d7{
+	position: relative;
+    width: 347px;
+	height: 42px;
+	background: #3D7EFF;
+	box-shadow: 0 2px 7px 0 rgba(61,126,255,0.64);
+	border-radius: 21px;
+    bottom: 15px;
+
+
+}
+
+#d7_i1{
+	position: absolute;
+    left: 15px;
+    top: 10px;
+
+}
+#d7_s1{
+	position: absolute;
+	top: 5px;
+    left: 55px;
+    font-family: DINAlternate-Bold;
+	font-size: 25px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;
+}
+#d7_s2{
+	position: absolute;
+    right: 35px;
+    top: 10px;
+	font-family: PingFangSC-Semibold;
+	font-size: 12px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;}
+#d7_i2{
+	position: absolute;
+	right: 15px;
+    top: 10px;
+}
+
+.addtionBox{
+
+}
+.additionText{
+	font-family: PingFangSC-Semibold;
+	font-size: 11px;
+	color: #8E8E93;
+	letter-spacing: 0;
+	text-align: left;
+	line-height: 34px;
+}

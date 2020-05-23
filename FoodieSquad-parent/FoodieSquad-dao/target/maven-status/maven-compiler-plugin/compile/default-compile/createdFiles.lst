@@ -1,0 +1,14 @@
+com\niit\mapper\DeliverMapper.class
+com\niit\mapper\CanteenMapper.class
+com\niit\mapper\UserTeleMapper.class
+com\niit\mapper\HistoryItemMapper.class
+com\niit\mapper\OrderMapper.class
+com\niit\mapper\WindowMapper.class
+com\niit\mapper\DishMapper.class
+com\niit\util\ProcessTime.class
+com\niit\mapper\UserMapper.class
+com\niit\mapper\CartItemMapper.class
+com\niit\mapper\AdminMapper.class
+com\niit\mapper\FavoriteMapper.class
+com\niit\mapper\UserAddressMapper.class
+com\niit\mapper\CartMapper.class
